@@ -1,7 +1,8 @@
 FROM docker/compose:1.24.0
-RUN apk add --no-cache bash git openssh curl
+RUN apk add --no-cache bash git openssh curl jq
 RUN git --version
 RUN curl --version
+RUN jq --version
 RUN head --version || true
 RUN cut --version || true
 RUN docker --version
